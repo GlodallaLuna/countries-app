@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  overflow-x: hidden;
+  font-family: var(--lato-font);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+:root {
+  --primary-clr: hsl(216, 86%, 85%);
+  --secondary-clr: hsl(216, 61%, 63%);
+  --dark-text-clr: hsl(180, 6%, 6%);
+  --light-text-clr: hsl(0, 0%, 100%);
+  --neautral-clr: hsl(0, 0%, 50%);
+  --footer-clr: hsl(200, 19%, 18%);
+}
+
+.dark-mode {
+  --primary-clr: hsl(144, 60%, 85%);
+  --secondary-clr: hsl(159, 42%, 49%);
+  --dark-text-clr: hsl(180, 6%, 6%);
+  --light-text-clr: hsl(0, 0%, 100%);
+  --neautral-clr: hsl(0, 0%, 50%);
+  --footer-clr: hsl(200, 19%, 18%);
+}
+
+:root {
+  --lato-font: "Lato", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--montserrat-font);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.css.map */

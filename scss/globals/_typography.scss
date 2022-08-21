@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li {
+  margin: 0;
+}
+
+h1,
+h2 {
+    font-family: var(--montserrat-font);
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+
+
+ul {
+  list-style: none;
+}
