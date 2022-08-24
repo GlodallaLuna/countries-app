@@ -39,11 +39,11 @@ img {
   --footer-clr: hsl(200, 19%, 18%);
 }
 
-.dark-mode {
+.green-mode {
   --primary-clr: hsl(144, 60%, 85%);
   --secondary-clr: hsl(159, 42%, 49%);
-  --dark-text-clr: hsl(180, 6%, 6%);
-  --light-text-clr: hsl(0, 0%, 100%);
+  --dark-clr: hsl(180, 6%, 6%);
+  --light-clr: hsl(0, 0%, 100%);
   --neautral-clr: hsl(0, 0%, 50%);
   --footer-clr: hsl(200, 19%, 18%);
 }
@@ -226,7 +226,7 @@ button:hover {
     max-width: 90%;
     margin: 0 auto;
     background-color: var(--light-clr);
-    margin-top: 4rem;
+    margin-top: 6.5rem;
     border-radius: 20px;
   }
 }
