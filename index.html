@@ -13,8 +13,47 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
-<body>
-      <h1>Welcome, Discover the World  with us. भारत - विकिपीडिया</h1>
-      <div>Welcome, Discover the World  with us. भारत - विकिपीडिया</div>  
+<body id="index__body">
+      <!-- <h1>Welcome, Discover the World  with us. भारत - विकिपीडिया</h1>
+      <div>Welcome, Discover the World  with us. भारत - विकिपीडिया</div>   -->
+      
+        <div class="header ">
+        
+        <div class="toggle-container">
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="labels" data-on="Green Theme" data-off="Blue Theme"></span>
+                  </label>
+        </div>
+        <div class="wrapper ">
+            <div class="wrapper--img"><img class="header__img" src="images/planet-blue.svg" alt="Illustration of the Planet Earth with location symbols and a paper plane"></div>
+            <div class="wrapper--text">
+                <h1 class="title header__title">Welcome, <br> Discover the World  with us.</h1>
+                <p class="header__paragraph">Type the name of a country in the form below and we will tell you everything we  know about it.</p>
+                <div class="header__form flex">
+                    <form>
+                        <input class="header__input" type="text" placeholder="Italy"><br>
+                    </form>
+                    <div class="button--form"><button>Continue</button></div>
+                </div>
+                <div class="flex error">
+                    <p class="error__message">Did you mean:</p>
+                    <ul class="error__list">
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">Italia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+      
+
+      <footer class="footer">
+        <div>
+            <p> &copy;2022 Created by Gloria Mancini and Niall Byrnes</p>
+            <div><a class="footer__link" href="https://storyset.com/geography">Illustrations made by https://storyset.com/</a></div>
+            <div><a class="footer__link" href="https://restcountries.com/#api-endpoints-v3-language">Powered by REST Countries</a></div>
+        </div>
+      </footer>
 </body>
 </html>

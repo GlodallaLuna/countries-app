@@ -1,0 +1,26 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+.footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 2rem 1rem .5rem 1rem;
+    font-size: .8rem;
+
+    @include u.breakpoint(large) {
+        font-size: 1rem;
+    }
+    
+
+    &__link {
+        color: var(--dark-clr);  
+    }
+
+    &__link:hover {
+        color: var(--secondary-clr);
+    }
+}
+
+ 
+
+
