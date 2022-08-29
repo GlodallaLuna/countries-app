@@ -23,6 +23,29 @@ button {
     }
 }
 
+.wrapper-button {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.button--back {
+  display: inline-block;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+
+  @include u.breakpoint(medium) {
+    max-width: 31rem;
+    margin: 0 auto;
+  }
+
+  &>button {
+    width: 100%;
+    
+  }
+}
+
+
 button:hover {
     transform: scale(1.1);
 }

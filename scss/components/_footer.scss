@@ -14,12 +14,27 @@
 
     &__link {
         color: var(--dark-clr);  
+
+        
     }
 
-    &__link:hover {
+    &__link:hover,
+    &__link--data:hover {
         color: var(--secondary-clr);
     }
+
+    &--data {
+        background-color: var(--footer-clr);
+        color: var(--light-clr);
+    }
+
+    &__link--data {
+        color: var(--light-clr); 
+    }
+    
 }
+
+
 
  
 

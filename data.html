@@ -1,42 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- <main id="container">
-        <div>
-            <p id="name-common">Italy, <span id="name-local">Italia</span></p>
-        </div>
-        <div>
-            <img id="flag-img" src="#">
-        </div>
-        <div>
-            <p id="capital">Rome <span id="capital-local">Roma</span></p>
-        
-        </div>
-        <div>
-            <p id="continent">Europe</p>
-        </div>
-        <div>
-            <ul id="laguages">
-                <li></li>
-            </ul>
-        </div>
-        <div>
-            <p id="currency">Euro</p>
-        </div>
-        <div>
-            <p id="population">5636578568</p>
-        </div>
-        <div>
-            <p id="area">75687079</p>
-        </div>
-    </main> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet"> 
+     <!--CSS and JS links-->
+    <link rel="stylesheet" href="css/style.css" />  
+    <script src="js/data.js" defer></script>
+  </head>
+  <body>
+    <!--header-->
+    <div class="data-header">
+      <div class="data-header--wrapper">
+        <h1 class="title data-header--title">Here is what we have found about <span class="title--span">India</span></h1>
+        <div class="data-header--img"><img  src="images/teacher-blue.svg" alt="illustration of a teacher with a world map"></div>
+      </div>
+    </div>
 
-</body>
+    <main>
+      <!--flag and info section-->
+      <div class="content">
+        <div class="flag"><img id="flag" src="images/Flag_of_India.svg.png" alt="national flag" ></div>
+        <div class="info">
+          <div class="info__label">Language/s and Local Name/s:</div>
+            <ul class="local-names"></ul>
+          
+          <div class="info__row flex">
+            <p class="info__label">Capital:</p> <p class="info__text" id="capital">New Dehli</p>
+          </div><div class="info__row flex">
+            <p class="info__label">Contient:</p> <p class="info__text" id="continent"></p>
+          </div>
+          <div class="info__row flex">
+            <p class="info__label">Currency:</p> <p class="info__text" id="currency"></p>
+          </div>
+          <div class="info__row flex">
+            <p class="info__label">Population:</p> <p class="info__text population"></p>
+          </div>
+          <div class="info__row flex">
+            <p class="info__label">Area:</p> <p class="info__text"></p>
+          </div>
+        </div>
+      </div>
+    
+      <!--fan-facts card-->
+      <div class="card-wrapper">
+        <div class="card">
+          <h2 class="card__title">Fun-facts</h2>
+          <p class="card__text">Did you know that <span class="population-rank"></span> and is the <span></span>  biggest in area?!</p>
+        </div>
+      </div>
+
+      <!--geolocation section-->
+      <div class="geolocation">
+        <h2 class="geolocation__title">We also provided the geolocation</h2>
+        <div class="geolocation__wrapper">
+          <div class="geolocation__img"><img src="images/woman-blue.svg" alt="illustration of a scientist"></div>
+          <div class="geolocation__map"><img src="images/inida-google-map.jpg" alt=""></div>
+        </div>
+        <div class="wrapper-button"><a class="button--back" href="index.html"><button>Back to the Home</button></a></div>
+      </div>
+
+      
+    </main>
+    
+    <!--footer-->
+    <footer class="footer footer--data">
+      <div>
+        <p>&copy;2022 Created by Gloria Mancini and Niall Byrnes</p>
+        <div>
+          <a
+            class="footer__link footer__link--data"
+            href="https://storyset.com/geography"
+            target="_blank"
+            >Illustrations made by https://storyset.com/</a
+          >
+        </div>
+        <div>
+          <a
+            class="footer__link footer__link--data"
+            href="https://restcountries.com/#api-endpoints-v3-language"
+            target="_blank"
+            >Powered by REST Countries</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
