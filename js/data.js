@@ -76,10 +76,10 @@ populationRankElement.innerHTML = populationRankString;
 const areaRankElement = document.querySelector(".area-rank");
 const areaRankString =
   data.areaRank === 1
-    ? `<b>biggest</b> in area!`
+    ? `<b>biggest</b> in area!?`
     : `<b> ${data.areaRank}${returnSuffix(
         data.areaRank
-      )} </b> biggest in area!`;
+      )} </b> biggest in area!?`;
 
 areaRankElement.innerHTML = areaRankString;
 
@@ -94,7 +94,7 @@ populationElement.innerHTML = numberWithCommas(data.population);
 
 //adding area number with commas to the html
 const areaElement = document.querySelector(".area");
-areaElement.innerHTML = `${numberWithCommas(data.area)}  km<sup>2</sup>;`;
+areaElement.innerHTML = `${numberWithCommas(data.area)}  km<sup>2</sup>`;
 
 //Capital in the html
 const capitalElement = document.querySelector("#capital");

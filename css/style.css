@@ -394,7 +394,7 @@ button:hover {
 @media (min-width: 52em) {
   .data-header--title {
     font-size: 2.2rem;
-    padding-top: 4rem;
+    padding-top: 3.5rem;
     text-align: left;
   }
 }
@@ -415,21 +415,28 @@ button:hover {
 }
 @media (min-width: 78.125em) {
   .data-header--wrapper {
-    padding-top: 6rem;
+    padding-top: 3rem;
     max-width: 66rem;
   }
 }
 .data-header--img {
   padding: 0 1.2rem;
+  display: flex;
 }
 @media (min-width: 37em) {
   .data-header--img {
     padding: 0 4rem;
+    margin-top: 2rem;
   }
 }
 @media (min-width: 52em) {
   .data-header--img {
     padding: 0 0 0 4rem;
+  }
+}
+@media (min-width: 52em) {
+  .data-header--img {
+    margin-top: 2rem;
   }
 }
 
@@ -616,7 +623,7 @@ button:hover {
 
 .geo-map {
   box-shadow: var(--dark-clr) 14px 13px;
-  width: 250px;
+  width: 280px;
   height: 180px;
 }
 @media (min-width: 30em) {
