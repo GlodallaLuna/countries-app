@@ -617,7 +617,7 @@ button:hover {
 .geo-map {
   box-shadow: var(--dark-clr) 14px 13px;
   width: 250px;
-  height: 150px;
+  height: 180px;
 }
 @media (min-width: 30em) {
   .geo-map {

@@ -256,7 +256,7 @@
 .geo-map {
     box-shadow: var(--dark-clr) 14px 13px;
     width: 250px;
-    height: 150px;
+    height: 180px;
 
     @include u.breakpoint(small) {
         width: 350px;
