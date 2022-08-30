@@ -166,6 +166,10 @@
 
     &__title {
         margin-bottom: 1rem;
+        font-size: 1.3;
+        @include u.breakpoint(medium) {
+        font-size: 1.5rem;
+        }
     }
 
     &__text {
@@ -215,10 +219,10 @@
     &__img {
         max-width: 25rem;
         margin: 0 auto;
-        padding: 0 2.5rem 0 2rem;
+        padding: 0 1rem 0 2rem;
 
         @include u.breakpoint(large) {
-            padding: 0 0 0 2rem;
+            padding: 0 0 0 2.5rem;
         }
 
         @include u.breakpoint(xlarge) {
@@ -227,13 +231,17 @@
     }
 
     &__map {
-        max-width: 30rem;
-        padding: 0 2rem;
-        margin: 0 auto;
+        // max-width: 30rem;
+        // padding: 0 2rem;
+        // margin: 0 auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin: 0 2rem;
         
 
         @include u.breakpoint(large) {
-            padding: 0 2rem 0 2.5rem;
+            padding: 0 2.5rem 0 0;
         }
 
         @include u.breakpoint(xlarge) {
@@ -241,8 +249,23 @@
         }
     }
 
-    &__map> img {
-        box-shadow: var(--dark-clr) 14px 13px;
+
+    
+}
+
+.geo-map {
+    box-shadow: var(--dark-clr) 14px 13px;
+    width: 250px;
+    height: 150px;
+
+    @include u.breakpoint(small) {
+        width: 350px;
+        height: 250px; 
+    }
+
+    @include u.breakpoint(medium) {
+    width: 400px;
+    height: 300px;
     }
 }
 

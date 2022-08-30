@@ -1,9 +1,17 @@
+const theme = sessionStorage.getItem("theme");
+const teacherImg = document.querySelector("#teacher");
+const scientistImg = document.querySelector("#scientist");
+
+if (theme === "blue") {
+  teacherImg.src = "images/teacher-blue.svg";
+  scientistImg.src = "images/woman-blue.svg";
+} else {
+  teacherImg.src = "images/teacher-green.svg";
+  scientistImg.src = "images/woman-green.svg";
+  document.body.classList.toggle("green-mode");
+}
+
 const data = JSON.parse(sessionStorage.getItem("data"));
-
-
-
-
-
 
 // 1) in most cases, only the last digit matters
 // 2) special cases are 11,12,13,111,112,113,211,212,213 (all 'th')
@@ -38,8 +46,12 @@ const returnSuffix = (number) => {
   }
 };
 
+//name in the html title
+const titleNameElement = document.querySelector("#name-title");
+titleNameElement.innerHTML = data.englishName;
+
 //flag in the html
-const flagElement = document.querySelector("#flag")
+const flagElement = document.querySelector("#flag");
 flagElement.src = data.flag;
 
 //to put the localNames object in the HTML
@@ -47,7 +59,6 @@ const languagesAndNames = document.querySelector(".local-names");
 data.localNames.forEach((obj) => {
   languagesAndNames.innerHTML += `<li class="info__text">${obj.language}: ${obj.name}</li>`;
 });
-
 
 const populationRankElement = document.querySelector(".population-rank");
 
@@ -62,6 +73,15 @@ const populationRankString =
 
 populationRankElement.innerHTML = populationRankString;
 
+const areaRankElement = document.querySelector(".area-rank");
+const areaRankString =
+  data.areaRank === 1
+    ? `<b>biggest</b> in area!`
+    : `<b> ${data.areaRank}${returnSuffix(
+        data.areaRank
+      )} </b> biggest in area!`;
+
+areaRankElement.innerHTML = areaRankString;
 
 //to add commas to a long number
 function numberWithCommas(x) {
@@ -72,15 +92,29 @@ function numberWithCommas(x) {
 const populationElement = document.querySelector(".population");
 populationElement.innerHTML = numberWithCommas(data.population);
 
+//adding area number with commas to the html
+const areaElement = document.querySelector(".area");
+areaElement.innerHTML = `${numberWithCommas(data.area)}  km<sup>2</sup>;`;
 
-//Capital in the html 
-const capitalElement = document.querySelector("#capital")
+//Capital in the html
+const capitalElement = document.querySelector("#capital");
 capitalElement.innerHTML = data.capital;
 
 //continent in the html
-const continentElement = document.querySelector("#continent")
+const continentElement = document.querySelector("#continent");
 continentElement.innerHTML = data.continent;
 
 //currency in the html
-const currencyElement = document.querySelector("#currency")
-currencyElement = data.currencies;
+const currencyElement = document.querySelector("#currency");
+currencyElement.innerHTML = `${data.currencies.name}, ${data.currencies.symbol}`;
+
+const geolocation = document.querySelector("#geolocation");
+
+const place = data.englishName.split(" ").join("+");
+
+geolocation.innerHTML = `<iframe class='geo-map'
+frameborder="0" style="border:0"
+referrerpolicy="no-referrer-when-downgrade"
+src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCy7fl1hPLnwlV-YRAdLbaWbxhGaN4L_OQ&q=${place}"
+allowfullscreen>
+</iframe>`;

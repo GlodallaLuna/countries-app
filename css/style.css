@@ -533,6 +533,12 @@ button:hover {
 }
 .card__title {
   margin-bottom: 1rem;
+  font-size: 1.3;
+}
+@media (min-width: 37em) {
+  .card__title {
+    font-size: 1.5rem;
+  }
 }
 .card__text {
   font-size: 1.1rem;
@@ -579,11 +585,11 @@ button:hover {
 .geolocation__img {
   max-width: 25rem;
   margin: 0 auto;
-  padding: 0 2.5rem 0 2rem;
+  padding: 0 1rem 0 2rem;
 }
 @media (min-width: 52em) {
   .geolocation__img {
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 2.5rem;
   }
 }
 @media (min-width: 78.125em) {
@@ -592,13 +598,14 @@ button:hover {
   }
 }
 .geolocation__map {
-  max-width: 30rem;
-  padding: 0 2rem;
-  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
 }
 @media (min-width: 52em) {
   .geolocation__map {
-    padding: 0 2rem 0 2.5rem;
+    padding: 0 2.5rem 0 0;
   }
 }
 @media (min-width: 78.125em) {
@@ -606,8 +613,23 @@ button:hover {
     padding-left: 0;
   }
 }
-.geolocation__map > img {
+
+.geo-map {
   box-shadow: var(--dark-clr) 14px 13px;
+  width: 250px;
+  height: 150px;
+}
+@media (min-width: 30em) {
+  .geo-map {
+    width: 350px;
+    height: 250px;
+  }
+}
+@media (min-width: 37em) {
+  .geo-map {
+    width: 400px;
+    height: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -44,7 +44,9 @@ async function getData(userInput) {
     //getting continent
     const continent = country.continents[0];
     //getting the currencies
-    const currencies = country.currencies;
+    const currenciesObject = country.currencies;
+    const currencyKey = Object.keys(currenciesObject)[0];
+    const currencies = currenciesObject[currencyKey];
 
     //getting the population
     const population = country.population;
@@ -87,8 +89,6 @@ async function getData(userInput) {
       map: map
     };
 
-    console.log(countryData)
-
     // Save data in session storage for next page
     const dataString = JSON.stringify(countryData);
     sessionStorage.setItem("data", dataString);
@@ -109,13 +109,26 @@ button.addEventListener("click", () => {
 let themeToggler = document.querySelector("#themeToggler");
 let planetImg = document.querySelector(".header__img");
 
+// default sessionstorage theme to blue if there isn't a current value
+const theme = sessionStorage.getItem("theme");
+
+if (theme === null) {
+  sessionStorage.setItem("theme", "blue");
+} else if (theme === "green") {
+  document.body.classList.toggle("green-mode");
+  planetImg.src = "images/planet-green.svg";
+  themeToggler.checked = true;
+}
+
 themeToggler.addEventListener("click", () => {
   document.body.classList.toggle("green-mode");
 
   if (document.body.classList.value === "green-mode") {
     planetImg.src = "images/planet-green.svg";
+    sessionStorage.setItem("theme", "green");
   } else {
     planetImg.src = "images/planet-blue.svg";
+    sessionStorage.setItem("theme", "blue");
   }
 });
 
@@ -201,4 +214,3 @@ function computeLevenshteinDistance(a, b) {
 
   return D[A - 1][B - 1];
 }
-
