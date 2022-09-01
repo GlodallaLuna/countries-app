@@ -313,7 +313,7 @@ button:hover {
     gap: 0;
   }
 }
-.header__form > form {
+.header__form > .form {
   width: 100%;
 }
 .header__input {

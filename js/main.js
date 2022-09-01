@@ -100,10 +100,18 @@ async function getData(userInput) {
   }
 }
 
+input.addEventListener("keyup", e => {
+  if (e.keyCode == "13") {
+    button.click();
+  }
+});
+
 button.addEventListener("click", () => {
   const userInput = input.value;
   getData(userInput);
 });
+
+
 
 //change theme
 let themeToggler = document.querySelector("#themeToggler");
